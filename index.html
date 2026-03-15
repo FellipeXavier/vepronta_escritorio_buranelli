@@ -13,23 +13,19 @@
             height: 100%;
             background-color: #f0f0f0;
         }
-        /* Estilo do botão de Realidade Aumentada */
         #ar-button {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 8px;
-            border: 1px solid #ccc;
-            padding: 10px 20px;
+            border: none;
+            padding: 12px 24px;
             position: absolute;
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             font-family: sans-serif;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+            z-index: 100;
         }
     </style>
 </head>
@@ -38,19 +34,19 @@
     <model-viewer 
         src="https://raw.githubusercontent.com/FellipeXavier/vepronta_escritorio_buranelli/main/ESCRITORIO.glb"
         ar
-        ar-modes="webxr scene-viewer quick-look"
+        ar-modes="scene-viewer webxr quick-look"
+        ar-scale="fixed"
         camera-controls
-        poster="poster.webp"
         shadow-intensity="1"
         environment-image="neutral"
         auto-rotate
-        touch-action="pan-y">
+        touch-action="pan-y"
+        alt="Escritório Buranelli em Realidade Aumentada">
         
         <button slot="ar-button" id="ar-button">
-             👋 VER NO MEU ESPAÇO
+             🏢 VER EM TAMANHO REAL
         </button>
 
-        <div slot="progress-bar"></div>
     </model-viewer>
 
 </body>
