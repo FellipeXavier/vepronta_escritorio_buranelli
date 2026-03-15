@@ -11,7 +11,7 @@
         model-viewer {
             width: 100%;
             height: 100%;
-            background-color: #f0f0f0;
+            background-color: #e0e0e0; /* Fundo ligeiramente mais escuro para destacar o modelo */
         }
         #ar-button {
             background-color: #ffffff;
@@ -34,17 +34,18 @@
     <model-viewer 
         src="https://raw.githubusercontent.com/FellipeXavier/vepronta_escritorio_buranelli/main/ESCRITORIO.glb"
         ar
-        ar-modes="scene-viewer webxr quick-look"
-        ar-scale="fixed"
+        ar-modes="scene-viewer quick-look webxr"
+        ar-scale="auto"
         camera-controls
         shadow-intensity="1"
-        environment-image="neutral"
+        shadow-softness="0.5"
+        environment-image="legacy"
+        exposure="1"
         auto-rotate
-        touch-action="pan-y"
-        alt="Escritório Buranelli em Realidade Aumentada">
+        touch-action="pan-y">
         
         <button slot="ar-button" id="ar-button">
-             🏢 VER EM TAMANHO REAL
+             🏢 VER EM TAMANHO REAL COM SOMBRA
         </button>
 
     </model-viewer>
